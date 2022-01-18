@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="974.0" stylesheets="@FlatBee.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesfranciscodelosrios.Puerto.MainController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Puerto">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="477.0" prefWidth="697.0" text="Muelles" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="67.0" layoutY="44.0" text="Carga" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="64.0" layoutY="60.0" text="Nombre Carguero: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="tCNombre" layoutX="194.0" layoutY="35.0" onKeyTyped="#checkTextFields" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                                                            <TextField fx:id="tCContenedores" onKeyTyped="#checkTextFields" prefHeight="29.0" prefWidth="170.0" promptText="Max 20" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                                                            <Button fx:id="bCAdd" disable="true" layoutX="153.0" layoutY="142.0" mnemonicParsing="false" onAction="#cargaCarguero" stylesheets="@stylesheet.css" text="Añadir" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0" />
+                                                            <ListView fx:id="lvCarga" layoutX="73.0" layoutY="189.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0" />
+                                                            <Label text="Numero de Contenedores: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </TitledPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="68.0" layoutY="62.0" text="Descarga" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="21.0" layoutY="24.0" text="Nombre Carguero: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="tDNombre" layoutX="239.0" layoutY="23.0" onKeyTyped="#checkTextFields" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                                                            <TextField fx:id="tDContenedores" layoutX="223.0" layoutY="88.0" onKeyTyped="#checkTextFields" prefHeight="29.0" prefWidth="170.0" promptText="Max 20" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                                                            <Button fx:id="bDAdd" disable="true" layoutX="127.0" layoutY="154.0" mnemonicParsing="false" onAction="#descargaCarguero" stylesheets="@stylesheet.css" text="Añadir" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0" />
+                                                            <ListView fx:id="lvDescarga" layoutX="94.0" layoutY="212.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0" />
+                                                            <Label layoutX="-5.0" layoutY="92.0" text="Numero de Contenedores: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </TitledPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                    <Label layoutX="45.0" layoutY="462.0" text="Espacio restante para" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="300.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lNContenedores" layoutX="202.0" layoutY="457.0" text="00" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="480.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="256.0" layoutY="462.0" text="contenedores" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="515.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Zona de carga">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="130.0" layoutY="73.0" text="Descarga de contenedores" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="lvDContenedores" layoutX="277.0" layoutY="156.0" prefHeight="350.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                    <Label layoutX="196.0" layoutY="82.0" text="Numero de equipos de trabajadores: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
+                                    <Label layoutX="72.0" layoutY="115.0" text="Numero de contenedores a descargar: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+                                    <TextField fx:id="tfWorkers" layoutX="379.0" layoutY="58.0" onKeyTyped="#checkTextFields" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="45.0" />
+                                    <TextField fx:id="tfContainers" layoutX="365.0" layoutY="113.0" onKeyTyped="#checkTextFields" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="95.0" />
+                                    <Button fx:id="bUnloadPackages" disable="true" layoutX="694.0" layoutY="75.0" mnemonicParsing="false" onAction="#descargarPaquetes" stylesheets="@stylesheet.css" text="Descargar paquetes" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="70.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
